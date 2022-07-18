@@ -20,9 +20,9 @@ from setuptools import setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-  README = open(os.path.join(here, "README.md"), encoding="utf-8").read()
+    README = open(os.path.join(here, "README.md"), encoding="utf-8").read()
 except OSError:
-  README = ""
+    README = ""
 
 install_requires = [
     "numpy>=1.12",
@@ -53,13 +53,13 @@ tests_require = [
     "tensorflow_datasets",
     "tensorflow",
     "torch",
-    "pandas", # get_repo_metrics script
+    "pandas",  # get_repo_metrics script
 ]
 
 __version__ = None
 
 with open("flax/version.py") as f:
-  exec(f.read(), globals())
+    exec(f.read(), globals())
 
 setup(
     name="flax",
@@ -74,7 +74,7 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python :: 3.7",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
-        ],
+    ],
     keywords="",
     author="Flax team",
     author_email="flax-dev@google.com",
@@ -85,5 +85,6 @@ setup(
     install_requires=install_requires,
     extras_require={
         "testing": tests_require,
-        },
-    )
+    },
+)
+
